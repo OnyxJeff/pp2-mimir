@@ -1,0 +1,14 @@
+port:
+  tcp6:8080:
+    listening: true
+    ip:
+      - "::"
+  tcp6:8443:
+    listening: true
+    ip:
+      - "::"
+process:
+  java:
+    running: true
+  mongod:
+    running: true

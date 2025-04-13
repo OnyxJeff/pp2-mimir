@@ -1,0 +1,7 @@
+*.log
+*.tmp
+*.bak
+secrets/
+*.env
+/nginx/code/config.ini
+/nginx/code/bookmarks.dat
