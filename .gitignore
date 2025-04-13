@@ -3,5 +3,5 @@
 *.bak
 secrets/
 *.env
-nginx/code/config.ini
-nginx/code/bookmarks.dat
+docker/nginx/code/config.ini
+docker/nginx/code/bookmarks.dat
