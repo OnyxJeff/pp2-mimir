@@ -9,6 +9,7 @@
 - **Grafana (with Speedtest)**: Monitors WAN uptime and internet speed.
 - **Uptime Kuma**: Tracks service uptime across my entire fleet.
 - **UniFi Controller**: Manages UniFi network devices and topology.
+- **NGINX Static Webpage**: Displays network info and links to commonly used sites.
 
 ---
 
@@ -35,11 +36,17 @@ cd docker/unifi-controller
 docker-compose up -d
 ```
 
+### NGINX Static Webpage Dashboard
+```bash
+cd docker/nginx
+docker-compose up -d
+```
+
 ## 💾 Backup
 ```bash
 bash backups/backup.sh
 ```
-Backs up Grafana config, Uptime Kuma database, and UniFi controller data.
+Backs up Grafana config, Uptime Kuma database, UniFi controller data, and NGINX code.
 
 ---
 
