@@ -5,6 +5,18 @@
 
 **Mimir** is the central observability hub of my homelab, built on a Raspberry Pi 4.
 
+## 📁 Repo Structure
+
+```text
+mimir/
+├── .github/workflows/    # CI for YAML validation
+├── backups/              # Exported or example snapshot files
+├── docker/               # YAML-based -darr stack applications
+└── README.md             # You're reading it!
+```
+
+---
+
 ### 🧰 Services
 - **Grafana (with Speedtest)**: Monitors WAN uptime and internet speed.
 - **Uptime Kuma**: Tracks service uptime across my entire fleet.
