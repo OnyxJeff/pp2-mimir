@@ -17,42 +17,41 @@ mimir/
 
 ---
 
-### 🧰 Services
+## 🧰 Services
 - **Grafana (with Speedtest)**: Monitors WAN uptime and internet speed.
 - **Uptime Kuma**: Tracks service uptime across my entire fleet.
 - **UniFi Controller**: Manages UniFi network devices and topology.
 - **NGINX Static Webpage**: Displays network info and links to commonly used sites.
 
----
+### 📦 Docker Compose
 
-## 📦 Docker Compose
-
-### WAN Monitoring
+#### WAN Monitoring
 
 ```bash
 cd docker/internet-monitoring
 docker-compose up -d
 ```
 
-### Uptime Kuma
+#### Uptime Kuma
 
 ```bash
 cd docker/uptime-kuma
 docker-compose up -d
 ```
 
-### UniFi Controller
+#### UniFi Controller
 
 ```bash
 cd docker/unifi-controller
 docker-compose up -d
 ```
 
-### NGINX Static Webpage Dashboard
+#### NGINX Static Webpage Dashboard
 ```bash
 cd docker/nginx
 docker-compose up -d
 ```
+---
 
 ## 💾 Backup
 ```bash
