@@ -1,7 +1,10 @@
 # Mimir
 
-![Build](https://github.com/OnyxJeff/Mimir/actions/workflows/build.yml/badge.svg)
-![Maintained](https://img.shields.io/badge/maintained-yes-blue)
+![Build Status](https://github.com/OnyxJeff/pp2-mimir/actions/workflows/build.yml/badge.svg)
+![Maintenance](https://img.shields.io/maintenance/yes/2025.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![GitHub release](https://img.shields.io/github/v/release/OnyxJeff/pp2-mimir)
+![Issues](https://img.shields.io/github/issues/OnyxJeff/pp2-mimir)
 
 **Mimir** is the central observability hub of my homelab, built on a Raspberry Pi 4.
 
