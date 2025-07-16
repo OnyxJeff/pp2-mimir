@@ -1,5 +1,3 @@
----
-version: '1.0'
 services:
   unifi:
     image: ryansch/unifi-rpi:latest
