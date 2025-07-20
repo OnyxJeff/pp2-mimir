@@ -3,7 +3,7 @@ services:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
     volumes:
-    - /home/${USER}/uptime-kuma/data:/app/data
+    - /home/${USER}/pp2-mimir/docker/uptime-kuma/data:/app/data
     ports:
     - 3001:3001
     environment:
