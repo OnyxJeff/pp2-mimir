@@ -11,7 +11,8 @@ services:
       - "8843"
       - "6789:6789"
     networks:
-      - unifi
+      unifi:
+        vlan: 1  # Specify VLAN 1 here
     volumes:
       # Unifi v5.0.7 creates all of these directories (some remain empty)
       - config:/var/lib/unifi
@@ -26,6 +27,7 @@ services:
       - "traefik.controller.frontend.rule=Host:CHANGEME"
       - "traefik.controller.port=8443"
       - "traefik.controller.protocol=https"
+
   traefik:
     image: traefik:1.6
     container_name: traefik
@@ -37,11 +39,13 @@ services:
       # - "8843:8843"
       - "4443:4443"
     networks:
-      - unifi
+      unifi:
+        vlan: 1  # Specify VLAN 1 here
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.toml:/traefik.toml
       - ./acme.json:/acme.json
+
 volumes:
   config:
     driver: local
@@ -55,6 +59,10 @@ volumes:
     driver: local
   work:
     driver: local
+
 networks:
   unifi:
     name: unifi
+    driver: macvlan
+    driver_opts:
+      parent: eth0  # Replace 'eth0' with your actual physical interface
