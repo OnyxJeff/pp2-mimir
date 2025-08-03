@@ -3,7 +3,7 @@ pipeline:
     image: alpine
     environment:
       HOST: 192.168.1.18
-      USER: pi
+      USER: potentpi2
       DEST: /home/potentpi2
     commands:
       - apk add --no-cache openssh
