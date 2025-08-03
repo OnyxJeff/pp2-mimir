@@ -1,10 +1,9 @@
-pipeline:
-  test-mimir:
+name: Test on Mimir
+labels:
+  device: mimir
+steps:
+  - name: uname
     image: alpine
     commands:
       - echo "Running test on Mimir"
       - uname -a
-    when:
-      matrix:
-        WOODPECKER_AGENT_LABELS:
-          - device=mimir
