@@ -1,0 +1,14 @@
+pipeline:
+  deploy-mimir:
+    image: alpine
+    environment:
+      HOST: 192.168.1.18
+      USER: pi
+      DEST: /home/potentpi2
+    commands:
+      - apk add --no-cache openssh
+      - mkdir -p ~/.ssh
+      - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
+      - scp ./deploy/mimir/docker-compose.yml $USER@$HOST:$DEST/
+      - ssh $USER@$HOST 'docker compose -f ~/docker-compose.yml up -d'
