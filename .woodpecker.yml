@@ -1,14 +1,9 @@
-labels:
-  device: mimir
-
 steps:
-  - name: uname
+  ping:
     image: alpine
     commands:
-      - echo "Running test on Mimir"
-      - uname -a
+      - echo "Running on Mimir!"
     when:
-      labels:
-        linux: arm64
       event:
         - push
+      platform: linux/arm64
